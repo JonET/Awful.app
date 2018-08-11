@@ -32,6 +32,6 @@ class ImageTinting {
         context.fill(bounds)
         
         guard let imageBitmapContext = context.makeImage() else { return nil }
-        return UIImage(cgImage: imageBitmapContext, scale: image.scale, orientation: UIImageOrientation.up)
+        return UIImage(cgImage: imageBitmapContext, scale: image.scale, orientation: UIImage.Orientation.up)
     }
 }

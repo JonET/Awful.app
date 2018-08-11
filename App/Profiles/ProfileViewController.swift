@@ -137,7 +137,7 @@ extension ProfileViewController: WKScriptMessageHandler {
                 let urlString = body["URL"],
                 let url = URL(string: urlString, relativeTo: baseURL)
             {
-                showActionsForHomepage(url, atRect: CGRectFromString(body["rect"]!))
+                showActionsForHomepage(url, atRect: NSCoder.cgRect(for: body["rect"]!))
             }
         default:
             print("\(self) received unknown message from webview: \(message.name)")
